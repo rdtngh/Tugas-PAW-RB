@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-container">
+        <section class="card form-card" id="form-pendaftaran">
+            <h1>TUGAS INDIVIDU 3</h1>
+            <p class="subtitle">Form Pendaftaran Mahasiswa</p>
+
+            <form method="GET" action="detail.html">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <select id="kelas" name="kelas" required>
+                        <option value="">Pilih kelas</option>
+                        <option value="RA">RA</option>
+                        <option value="RB">RB</option>
+                        <option value="RC">RC</option>
+                        <option value="RD">RD</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prodi">Program Studi</label>
+                    <select id="prodi" name="prodi" required>
+                        <option value="">Pilih program studi</option>
+                        <option value="Informatika">Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknik Komputer">Teknik Komputer</option>
+                        <option value="Manajemen Informatika">Manajemen Informatika</option>
+                    </select>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pendaftar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-container">
+        <section class="card table-card" id="detail-pendaftar">
+            <h1>TUGAS INDIVIDU 3</h1>
+            <p class="subtitle">Detail Data Pendaftar</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>NIM</th>
+                        <th>Kelas</th>
+                        <th>Program Studi</th>
+                    </tr>
+                </thead>
+                <tbody id="data-pendaftar">
+                    <tr>
+                        <td>Nur Aulia Larasati</td>
+                        <td>119140008</td>
+                        <td>RB</td>
+                        <td>Informatika</td>
+                    </tr>
+                    <tr>
+                        <td>Rizky Pratama</td>
+                        <td>119140015</td>
+                        <td>RA</td>
+                        <td>Sistem Informasi</td>
+                    </tr>
+                    <tr>
+                        <td>Sinta Maharani</td>
+                        <td>119140022</td>
+                        <td>RC</td>
+                        <td>Teknik Komputer</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a class="back-link" href="pendaftaran.html">Kembali ke Form</a>
+        </section>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get("nama");
+        const nim = params.get("nim");
+        const kelas = params.get("kelas");
+        const prodi = params.get("prodi");
+        const tabelData = document.getElementById("data-pendaftar");
+
+        if (nama && nim && kelas && prodi) {
+            const baris = document.createElement("tr");
+            const data = [nama, nim, kelas, prodi];
+
+            data.forEach(function (isiData) {
+                const kolom = document.createElement("td");
+                kolom.textContent = isiData;
+                baris.appendChild(kolom);
+            });
+
+            tabelData.prepend(baris);
+        }
+    </script>
+</body>
+</html>
